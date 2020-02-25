@@ -1,3 +1,5 @@
+# LEVEL 1
+
 Создать переменную - 
 ```js
 const variable = 10;
@@ -59,3 +61,88 @@ array.forEach(element => console.log(element));
 ```
 
 если чет непонятно будет - пиши, спрашивай
+
+# LEVEL 2
+
+функция map делает из массива другой массив, например
+```js
+const a = [1, 2, 3, 4, 5, 6]
+const b = a.map((element)=>element*2)
+console.log(b); // [2, 4, 6, 8, 10, 12]
+```
+
+структура обьекта в js
+
+```js
+const a = {
+    ключ: 'значение'
+}
+```
+достать из обьекта значение по его ключу
+```js
+const a = {
+    field: 'value'
+}
+
+console.log(a.field); // value
+console.log(a['field']) // value
+
+```
+ # LEVEL 2 DOM
+ 
+ Достать элементы из DOM по его ID
+ 
+ ```html
+<div id="privetkakdela">kolyaaaan</div>
+```
+ ```js
+const a = document.getElementById('privetkakdela');
+console.log(a.innerHTML) // kolyaaaan
+```
+
+#
+Функция для кнопок 
+
+```js
+function f() {
+  console.log('privet');
+}
+```
+
+```html
+<button onclick="f()">press me</button>
+```
+#
+Текст из input
+
+```html
+<input id="fed"/>
+```
+
+```js
+const inputik = document.getElementById('fed');
+
+inputik.addEventListener('input', function(e) {
+  console.log(e.target.value); //выводит содержание input после любого его изменения
+});
+```
+#
+На каких координатах в DOM находится текущий scroll
+```js
+window.scrollY+window.innerHeight
+```
+
+event для scroll'а 
+
+```js
+window.addEventListener('scroll', function() {
+    
+});
+
+```
+координаты по Y любого элемента
+
+```js
+  const a = document.getElementById('test');
+  console.log(a.offsetTop);
+```

@@ -146,3 +146,91 @@ window.addEventListener('scroll', function() {
   const a = document.getElementById('test');
   console.log(a.offsetTop);
 ```
+
+# LEVEL 3 Работа с функциями
+
+Стрелочная функция
+```js
+const arrayFunction = (message) => {
+    return message.reverse()
+};
+
+console.log(arrayFunction('hello, world')) //dlrow ,ollhe
+```
+
+Callback функция
+
+```js
+const func = (callback) => {
+    callback('hello, world');
+}
+
+func((message) => console.log(message)) //hello, world
+```
+
+# LEVEL 3 DOM
+Тут тебе нужно разбираться самостоятельно. Маленькая подсказка:
+```js
+appendChild()
+```
+
+# LEVEL 3 NODE.JS
+
+Выполнить файл index.js с таким кодом в среде node.js:
+
+```js
+const msg = 'hello, world'
+console.log(msg);
+```
+Для того чтобы выполнить такой код, нужно написать
+в терминале: 
+
+```bash
+$ node index.js
+```
+
+Добавить npm в свой проект
+```bash
+$ npm init
+```
+
+Установка пакета через npm:
+```bash
+$ npm install <название пакета>
+```
+
+Как создать сервер на express.js
+```text
+ОТКРЫВАЙ ИХ ДОКУМЕНТАЦИЮ И ЧИТАЙ. ТАМ ВСЕ ПРОСТО
+```
+
+#
+Установка MongoDB:
+```bash
+$ sudo apt install mongodb-server-core
+$ sudo apt install mongodb-clients
+```
+Затем в папке home в терминале написать, 
+```bash
+$ sudo mkdir -p /data/db
+$ sudo mongod 
+```
+Эта команда запускает сервер MongoDB у тебя на компьютере.
+##
+
+Запустить клиент MongoDB для работы с ней:
+```bash
+$ mongo
+```
+##
+
+Когда запустил клиент, открывай документацию MongoDB, и читай как она работает.
+```js
+db.<имя коллекции>.insertOne({name: 'Misha', age: 20}); // добавить запись в коллекцию
+db.<имя коллекции>.findOne({name: 'Misha'}); //найти одну запись в коллкции
+db.<имя коллекции>.find({age: 20}); // найти все записи в коллекции с age: 20
+db.<имя коллекции>.remove({}); // удалить элементы из коллкции
+use <имя базы данных> // выбрать базу данных
+show collections // показать все коллекции
+```
+

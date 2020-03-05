@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<!--Функция принимает два аргумента. Обьект obj и строку str. 
+Если у обьекта есть ключ str, функция возвращает значение этого ключа, 
+если такого ключа нет возвращает null --> 
+
+ <script>
+ function ShowRes(obj, str) {
+if(obj[str]) {
+return obj[str]
+}
+else {
+return null; 
+}
+}
+
+const result = ShowRes({field: 'привет как твои дела'}, 'field');
+
+console.log(result);
+
+
+</script>
+        
+</body>
+
+</html>

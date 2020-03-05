@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<!--На html странице есть div, input, button.
+ при нажатии на button помещать текст из input(если он там есть) в div. --> 
+<div id="MainBlock">Hello, I am Kolya</div>
+<button onclick="f()">press me</button>
+<input id="MainInput" type="text"/>
+
+        <script>
+
+const inputik = document.getElementById('MainInput');
+
+function f() {
+      document.getElementById('MainBlock').innerHTML=inputik.value;
+    }
+        </script>
+        
+</body>
+
+</html>

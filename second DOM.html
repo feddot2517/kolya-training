@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+<meta charset="utf-8">
+<style>
+body{
+height: 5000px;
+}
+#MainBlock{
+float: right;
+margin-top: 1550px;
+border: 1px solid #333;
+}
+</style>
+</head>
+
+<body>
+<!-- На html странице с высотой 5000px в случаной
+ месте находится div с текстом "block", 
+когда этот div окажется в поле зрения пользователя, 
+один раз вывести в консоль "block in sight"--> 
+<div id="MainBlock">
+Swipe me, please
+</div>
+        <script>
+  let ILookedBlock = false;
+
+  const block = document.getElementById('MainBlock');
+
+  window.addEventListener('scroll', function() {
+      if(window.scrollY+window.innerHeight > block.offsetTop && !ILookedBlock) { 
+
+        alert('Hello, Block');
+
+      }
+
+});
+</script>
+
+        
+</body>
+
+</html>
